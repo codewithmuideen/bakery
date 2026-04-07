@@ -201,7 +201,7 @@ function countUp(el, target, duration) {
    ---------------------------------------------------------------- */
 function createUnifiedCard(item) {
   const col = document.createElement('div');
-  col.className = 'col-lg-3 col-md-4 col-sm-6 col-12';
+  col.className = 'col-12 col-md-4 col-lg-3';
 
   const priceStr = typeof item.price === 'number'
     ? `$${item.price.toFixed(2)}`
@@ -368,7 +368,7 @@ function renderMerchandise() {
   const items = allData.merchandise || [];
   items.forEach((item, i) => {
     const col = createUnifiedCard(item);
-    col.className = 'col-lg-3 col-md-6';
+    col.className = 'col-12 col-md-6 col-lg-3';
     col.setAttribute('data-aos', 'fade-up');
     col.setAttribute('data-aos-delay', String(i * 100));
     grid.appendChild(col);
