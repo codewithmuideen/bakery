@@ -32,6 +32,7 @@ html {
   scroll-behavior: smooth;
   scroll-padding-top: 78px;
   font-size: 16px;
+  overflow-x: hidden; /* stops horizontal scroll at the root */
 }
 
 body {
@@ -39,6 +40,7 @@ body {
   color: var(--text);
   background: var(--cream);
   overflow-x: hidden;
+  max-width: 100%;
   line-height: 1.6;
 }
 
@@ -672,8 +674,17 @@ a { text-decoration: none; }
   flex-wrap: wrap;
   gap: 12px;
   margin-bottom: 38px;
+  /* Contain children — prevents filter pills from leaking out of page */
+  min-width: 0;
+  max-width: 100%;
 }
-.filter-pills { display: flex; flex-wrap: wrap; gap: 8px; }
+.filter-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  min-width: 0;
+  max-width: 100%;
+}
 .sort-select {
   background: #fff;
   border: 1.5px solid var(--cream-dk);
