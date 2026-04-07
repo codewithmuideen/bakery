@@ -201,7 +201,7 @@ function countUp(el, target, duration) {
    ---------------------------------------------------------------- */
 function createUnifiedCard(item) {
   const col = document.createElement('div');
-  col.className = 'col-lg-3 col-md-4 col-sm-6';
+  col.className = 'col-lg-3 col-md-4 col-sm-6 col-12';
 
   const priceStr = typeof item.price === 'number'
     ? `$${item.price.toFixed(2)}`
