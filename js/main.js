@@ -225,12 +225,7 @@ function createUnifiedCard(item) {
       </div>
     </div>`;
 
-  /* Both card click AND button click open the modal */
-  col.querySelector('.product-card').addEventListener('click', () => openProductModal(item.id));
-  col.querySelector('.btn-view-details').addEventListener('click', e => {
-    e.stopPropagation();
-    openProductModal(item.id);
-  });
+  col.querySelector('.btn-view-details').addEventListener('click', () => openProductModal(item.id));
 
   return col;
 }
