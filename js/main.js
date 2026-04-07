@@ -199,7 +199,7 @@ function countUp(el, target, duration) {
 /* ----------------------------------------------------------------
    UNIFIED CARD FACTORY — same design for products & merchandise
    ---------------------------------------------------------------- */
-function createUnifiedCard(item, onCartClick) {
+function createUnifiedCard(item) {
   const col = document.createElement('div');
   col.className = 'col-lg-3 col-md-4 col-sm-6';
 
@@ -219,26 +219,17 @@ function createUnifiedCard(item, onCartClick) {
         <h5 class="card-product-name">${escapeHTML(item.name)}</h5>
         <p class="card-product-desc">${escapeHTML(item.description)}</p>
         <div class="card-product-price">${priceStr}</div>
-        <button class="btn-add-cart">
-          <i class="fas fa-shopping-bag me-2"></i>Add to Cart
+        <button class="btn-view-details">
+          <i class="fas fa-eye me-2"></i>View Details
         </button>
       </div>
     </div>`;
 
-  /* Card click → open detail modal */
-  col.querySelector('.product-card').addEventListener('click', e => {
-    if (e.target.closest('.btn-add-cart')) return;
-    openProductModal(item.id);
-  });
-
-  /* Add to Cart button */
-  col.querySelector('.btn-add-cart').addEventListener('click', e => {
+  /* Both card click AND button click open the modal */
+  col.querySelector('.product-card').addEventListener('click', () => openProductModal(item.id));
+  col.querySelector('.btn-view-details').addEventListener('click', e => {
     e.stopPropagation();
-    if (typeof onCartClick === 'function') {
-      onCartClick(item);
-    } else {
-      showToast(`${item.name} added to cart!`);
-    }
+    openProductModal(item.id);
   });
 
   return col;
@@ -283,14 +274,11 @@ function applyFiltersAndSearch() {
     return;
   }
 
-  list.forEach((p, i) => {
+  list.forEach(p => {
     const col = createUnifiedCard(p);
-    col.setAttribute('data-aos', 'fade-up');
-    col.setAttribute('data-aos-delay', String((i % 4) * 80));
+    col.style.animation = 'cardFadeIn 0.3s ease both';
     grid.appendChild(col);
   });
-
-  AOS.refresh();
 }
 
 /* ----------------------------------------------------------------
@@ -312,10 +300,6 @@ function initSearch() {
   if (!input) return;
   input.addEventListener('input', () => {
     activeSearch = input.value;
-    /* When searching, scroll to products section */
-    if (activeSearch.trim()) {
-      document.getElementById('products').scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
     applyFiltersAndSearch();
   });
 }
