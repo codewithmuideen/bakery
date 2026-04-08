@@ -97,7 +97,7 @@
       "name": "Eclair au Cafe",
       "price": 4.99,
       "category": "pastries",
-      "image": "https://images.unsplash.com/photo-1586985288123-2495f577dd09?w=400",
+      "image": "../assets/images/cream.jpg",
       "description": "Classic choux pastry filled with silky coffee diplomat cream and dipped in a glossy coffee fondant glaze. A Parisian favourite, freshly made daily.",
       "ingredients": "Unbleached flour, real butter, free-range eggs, whole milk, heavy cream, espresso, white chocolate, coffee extract, powdered sugar.",
       "tag": "premium"
@@ -129,7 +129,7 @@
       "name": "Pistachio & Rose Cookie",
       "price": 2.99,
       "category": "cookies",
-      "image": "https://images.unsplash.com/photo-1591736789847-6e43e5ac9f78?w=400",
+      "image": "../assets/images/shortbread.webp",
       "description": "Delicate shortbread-style cookies infused with rose water and studded with crushed pistachios, finished with a light dusting of edible rose petals.",
       "ingredients": "Unbleached flour, real butter, pistachios, rose water, caster sugar, free-range egg yolk, powdered sugar, edible rose petals.",
       "tag": "premium"
@@ -140,7 +140,7 @@
       "price": 1.99,
       "category": "cookies",
       "image": "https://images.unsplash.com/photo-1548365328-8c6db3220e4c?w=400",
-      "description": "Three ingredients. Infinite pleasure. Real butter, unbleached flour, and fine sugar — baked slowly for a melt-in-your-mouth crumble. No shortcuts.",
+      "description": "Three ingredients. Infinite pleasure. Real butter, unbleached flour, and fine sugar - baked slowly for a melt-in-your-mouth crumble. No shortcuts.",
       "ingredients": "Unbleached flour, real butter, caster sugar.",
       "tag": "classic"
     }
@@ -171,7 +171,7 @@
       "name": "Classic Lemon Meringue",
       "price": 22.99,
       "category": "pies",
-      "image": "https://images.unsplash.com/photo-1473819356888-52b5f8a5b09c?w=400",
+      "image": "../assets/images/lem.jfif",
       "description": "Sharp, tangy lemon curd in a crisp pastry shell, crowned with mountains of toasted Italian meringue. Baked fresh daily.",
       "ingredients": "Unbleached flour, real butter, fresh lemons, free-range eggs, caster sugar, cornflour, sea salt.",
       "tag": "popular"
@@ -183,7 +183,7 @@
       "name": "Bakerz Bite Signature Mug",
       "price": 14.99,
       "category": "merchandise",
-      "image": "https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?w=400",
+      "image": "../assets/images/mug.jpg",
       "description": "Start your morning right. Our 350ml ceramic mug features the Bakerz Bite logo in embossed gold. Dishwasher safe. Available in cream and charcoal.",
       "ingredients": "Premium ceramic, food-grade glaze, gold embossed logo.",
       "tag": "popular"
@@ -193,7 +193,7 @@
       "name": "Canvas Tote Bag",
       "price": 12.99,
       "category": "merchandise",
-      "image": "https://images.unsplash.com/photo-1607082349566-187342175e2f?w=400",
+      "image": "../assets/images/bag.jpg",
       "description": "Our sturdy 100% organic cotton canvas tote is printed with the Bakerz Bite motto. Perfect for your bakery haul.",
       "ingredients": "100% organic cotton canvas, water-based eco-friendly print.",
       "tag": "new"
@@ -203,7 +203,7 @@
       "name": "Glass Tumbler Set (2-pack)",
       "price": 19.99,
       "category": "merchandise",
-      "image": "https://images.unsplash.com/photo-1544145945-f90425340c7e?w=400",
+      "image": "../assets/images/cup.webp",
       "description": "Set of two 400ml borosilicate glass tumblers etched with the Bakerz Bite logo. Thermal resistant, perfect for hot or cold beverages.",
       "ingredients": "Borosilicate glass, laser-etched Bakerz Bite branding.",
       "tag": "premium"
